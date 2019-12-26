@@ -38,7 +38,7 @@ public class HomeController implements Initializable {
     @FXML
     private void studentMenu(ActionEvent event) {
         SceneChanger sc = new SceneChanger();
-        sc.changeScene("StudentPage.fxml");
+        sc.changeScene("StudentViews.fxml");
     }
 
     @FXML

@@ -17,6 +17,8 @@ import javafx.stage.Stage;
  */
 public class CostSharing extends Application {
     static Stage stage;
+    public static long stu_id;
+    public static boolean update;
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;

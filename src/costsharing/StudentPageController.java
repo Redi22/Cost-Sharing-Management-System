@@ -76,6 +76,45 @@ public class StudentPageController implements Initializable {
    
     
     private AnchorPane formPane;
+    @FXML
+    private TextField birthZone1;
+    @FXML
+    private TextField birthWoreda1;
+    @FXML
+    private TextField birthTown1;
+    @FXML
+    private TextField birthKebele1;
+    @FXML
+    private TextField birthHno1;
+    @FXML
+    private TextField pobox1;
+    @FXML
+    private TextField birthZone11;
+    @FXML
+    private TextField currentUnivName;
+    @FXML
+    private TextField currentYearEntrance;
+    @FXML
+    private TextField currentYear;
+    @FXML
+    private TextField withdrawSemester;
+    @FXML
+    private DatePicker withdrawDate;
+    @FXML
+    private TextField transUniver;
+    @FXML
+    private DatePicker transferDate;
+    @FXML
+    private TextField college;
+    @FXML
+    private TextField department;
+    @FXML
+    private TextField totalCost;
+    @FXML
+    private TextField transferSemester;
+    
+    
+ 
 
     /**
      * Initializes the controller class.
@@ -86,10 +125,24 @@ public class StudentPageController implements Initializable {
         Connection con = createCon();
         try {
             Statement st = con.createStatement();
+             if(CostSharing.update == true){
+            ResultSet rs = st.executeQuery("SELECT * FROM student WHERE id == " + CostSharing.stu_id );
+            fname.setText(rs.getString("fname"));
+            mname.setText(rs.getString("mname"));
+            lname.setText(rs.getString("lname"));
+            regionBirth.setText(rs.getString("region"));
+            birthZone.setText(rs.getString("zone"));
+            birthWoreda.setText(rs.getString("woreda"));
+            birthTown.setText(rs.getString("town"));
+            birthKebele.setText(rs.getString("kebele"));
+            birthHno.setText(rs.getString("hno"));
+            PhoneNum.setText(rs.getString("pno"));
             
+        }
         } catch (SQLException ex) {
             Logger.getLogger(StudentPageController.class.getName()).log(Level.SEVERE, null, ex);
         }
+       
         
         
     }    
