@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="costsharing.StudentViewsController">
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="costsharing.StudentViewsController">
    <children>
       <VBox prefHeight="666.0" prefWidth="158.0" spacing="16.0" style="-fx-background-color: #3C0844;">
          <children>
@@ -28,22 +28,22 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Student" textFill="#fff8f8">
+            <Button mnemonicParsing="false" onAction="#studentMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Student" textFill="#fff8f8">
                <graphic>
                   <FontAwesomeIcon fill="#f8f8f8" iconName="USERS" size="1.5em" />
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Services" textFill="#fff8f8">
+            <Button mnemonicParsing="false" onAction="#servicesMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Services" textFill="#fff8f8">
                <graphic>
                   <FontAwesomeIcon fill="#f8f8f8" iconName="COG" size="1.5em" />
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Admins" textFill="#fff8f8">
+            <Button mnemonicParsing="false" onAction="#adminMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Admins" textFill="#fff8f8">
                <graphic>
                   <FontAwesomeIcon fill="#f8f8f8" iconName="USER" size="1.5em" />
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Payment" textFill="#fff8f8">
+            <Button mnemonicParsing="false" onAction="#paymentMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Payment" textFill="#fff8f8">
                <graphic>
                   <FontAwesomeIcon fill="#f8f8f8" iconName="MONEY" size="1.5em" />
                </graphic>
@@ -53,11 +53,19 @@
       <HBox prefHeight="34.0" prefWidth="1024.0" style="-fx-background-color: #3C0844;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label prefHeight="34.0" prefWidth="688.0" />
-            <TextField fx:id="id" prefHeight="34.0" prefWidth="186.0" promptText="Search " style="-fx-background-color: #813E8B; -fx-background-radius: 0;" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #813E8B; -fx-background-radius: 0;" textFill="#f5f3f3">
+            <TextField fx:id="searchId" prefHeight="34.0" prefWidth="186.0" promptText="Search " style="-fx-background-color: #813E8B; -fx-background-radius: 0;" />
+            <Button mnemonicParsing="false" onAction="#search" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #813E8B; -fx-background-radius: 0;" textFill="#f5f3f3">
                <graphic>
                   <FontAwesomeIcon fill="#fffefe" iconName="SEARCH" size="1.5em" text="" wrappingWidth="16.714284896850586" />
                </graphic>
+            </Button>
+            <Button layoutX="884.0" layoutY="10.0" mnemonicParsing="false" onAction="#refresh" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #813E8B; -fx-background-radius: 0;" textFill="#f5f3f3">
+               <graphic>
+                  <FontAwesomeIcon fill="#fffefe" iconName="REFRESH" size="1.5em" wrappingWidth="16.714284896850586" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
             </Button>
          </children>
       </HBox>
@@ -66,7 +74,6 @@
           <TableColumn fx:id="id_view" prefWidth="48.0" text="ID" />
           <TableColumn fx:id="fullname" prefWidth="206.0" text="Full-Name" />
             <TableColumn fx:id="gender" minWidth="0.0" prefWidth="111.0" text="Gender" />
-            <TableColumn fx:id="nationality" prefWidth="66.0" text="Nationality" />
             <TableColumn fx:id="dob" minWidth="0.0" prefWidth="0.0" text="Date of Birth" />
             <TableColumn fx:id="region" prefWidth="94.0" text="Region" />
             <TableColumn fx:id="town" minWidth="0.0" prefWidth="72.0" text="Town" />

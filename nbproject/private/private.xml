@@ -3,9 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/AdminCreatePage.fxml</file>
             <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/StudentPageController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/CostSharing.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/SettingsController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/TableModel.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/Models/Student.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/PaymentController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/NonCafeFormController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/StudentViewsController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/Settings.fxml</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/DbConnection.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/NonCafe.java</file>
             <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/HomeController.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/AdminCreatePageController.java</file>
             <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/SceneChanger.java</file>
+            <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/Payment.fxml</file>
             <file>file:/C:/Users/kk/Documents/NetBeansProjects/CostSharing/src/costsharing/LoginController.java</file>
         </group>
     </open-files>

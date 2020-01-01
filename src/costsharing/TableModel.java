@@ -14,14 +14,13 @@ import java.time.LocalDate;
 public class TableModel {
     int id;
     LocalDate dob ;
-    String  fullname , gender , nationality , region , zone , woreda , town , kebele, hno , phone;
+    String  fullname , gender  , region , zone , woreda , town , kebele, hno , phone;
 
-    public TableModel(int id, LocalDate dob, String fullname, String gender, String nationality, String region, String zone, String woreda, String town, String kebele, String hno, String phone) {
+    public TableModel(int id, LocalDate dob, String fullname, String gender, String region, String zone, String woreda, String town, String kebele, String hno, String phone) {
         this.id = id;
         this.dob = dob;
         this.fullname = fullname;
         this.gender = gender;
-        this.nationality = nationality;
         this.region = region;
         this.zone = zone;
         this.woreda = woreda;
@@ -47,9 +46,7 @@ public class TableModel {
         return gender;
     }
 
-    public String getNationality() {
-        return nationality;
-    }
+    
 
     public String getRegion() {
         return region;
@@ -95,9 +92,6 @@ public class TableModel {
         this.gender = gender;
     }
 
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
 
     public void setRegion(String region) {
         this.region = region;

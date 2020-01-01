@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="costsharing.SettingsController">
+   <children>
+      <VBox prefHeight="666.0" prefWidth="158.0" spacing="16.0" style="-fx-background-color: #3C0844;">
+         <children>
+            <Label alignment="CENTER" prefHeight="102.0" prefWidth="162.0" text="COST SHARING" textFill="#f8f1f1">
+               <graphic>
+                  <FontAwesomeIcon fill="#f8f4f4" iconName="ANGLE_DOUBLE_RIGHT" size="2.5EM" text="" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#studentMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Student" textFill="#fff8f8">
+               <graphic>
+                  <FontAwesomeIcon fill="#f8f8f8" iconName="USERS" size="1.5em" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#servicesMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Services" textFill="#fff8f8">
+               <graphic>
+                  <FontAwesomeIcon fill="#f8f8f8" iconName="COG" size="1.5em" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#adminMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Admins" textFill="#fff8f8">
+               <graphic>
+                  <FontAwesomeIcon fill="#f8f8f8" iconName="USER" size="1.5em" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#paymentMenu" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #41084A;" text="Payment" textFill="#fff8f8">
+               <graphic>
+                  <FontAwesomeIcon fill="#f8f8f8" iconName="MONEY" size="1.5em" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <HBox prefHeight="34.0" prefWidth="1024.0" style="-fx-background-color: #3C0844;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="688.0" />
+         </children>
+      </HBox>
+      <AnchorPane layoutX="219.0" layoutY="72.0" prefHeight="261.0" prefWidth="527.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+         <children>
+            <TextField fx:id="newPass" layoutX="43.0" layoutY="106.0" prefHeight="34.0" prefWidth="200.0" promptText="New Password" />
+            <TextField fx:id="confPass" layoutX="285.0" layoutY="106.0" prefHeight="34.0" prefWidth="200.0" promptText="Confirm Password" />
+            <Label layoutX="37.0" layoutY="14.0" prefHeight="34.0" prefWidth="241.0" style="-fx-background-color: white;" text="Change password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="43.0" layoutY="53.0" prefHeight="34.0" prefWidth="200.0" promptText="Username" />
+            <TextField fx:id="currrPass" layoutX="285.0" layoutY="53.0" prefHeight="34.0" prefWidth="200.0" promptText="Current Password" />
+            <Button fx:id="changePass" layoutX="190.0" layoutY="183.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="35.0" prefWidth="147.0" style="-fx-background-color: #9F4FAB;" text="Change Password" textFill="#fff8f8" />
+         </children>
+         <effect>
+            <DropShadow color="#d0c4c4" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -18,58 +18,53 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
  *
  * @author kk
  */
-public class HomeController implements Initializable {
+public class AdminCreatePageController implements Initializable {
     @FXML
-    private Button student_menu;
+    private TextField newUsername;
     @FXML
-    private Button services_menu;
+    private Button makeAdmin;
     @FXML
-    private Button admin_menu;
+    private PasswordField Pass;
     @FXML
-    private Button payment_menu;
+    private PasswordField newPass;
     @FXML
-    private AnchorPane dash;
-    @FXML
-    private Label student_list;
-    @FXML
-    private AnchorPane dash1;
-    @FXML
-    private Label student_list1;
+    private PasswordField confNewPass;
+   
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+
+    @FXML
+    private void makeAdmin(ActionEvent event) {
         try {
-            // TODO
-            
             Connection con = createCon();
             Statement s = con.createStatement();
-            ResultSet rs = s.executeQuery("select * from student where currsemester < 8");
-            while(rs.next()){
-                    student_list.setText("" + rs.getRow());
-             
-            }
-            ResultSet r = con.createStatement().executeQuery("select * from student where currsemester > 8");
+            ResultSet r = s.executeQuery("select * from admin where id = " + CostSharing.loggedUserId);
             while(r.next()){
-                    student_list1.setText("" + rs.getRow());
-             
+                if(r.getString("password").equals(Pass.getText()) == true){
+                    if(newPass.getText().equals(confNewPass.getText())){
+                        con.createStatement().executeUpdate("insert into admin(username, password ) values ( + '" + newUsername.getText() + "' , ' " + newPass.getText() + " ')");
+                    }
+                }
             }
-            
         } catch (SQLException ex) {
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AdminCreatePageController.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }  
-
+    }
     @FXML
     private void studentMenu(ActionEvent event) {
         SceneChanger sc = new SceneChanger();
@@ -93,5 +88,5 @@ public class HomeController implements Initializable {
         SceneChanger sc = new SceneChanger();
         sc.changeScene("Payment.fxml");
     }
-    
+
 }
